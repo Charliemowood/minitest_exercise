@@ -2,6 +2,8 @@ def return_10()
   return 10
 end
 
+# the following functions seem pretty straight forward so I am
+# a, b for parameters it seems more clean to me.
 def add(a, b)
   return a + b
 end
@@ -50,4 +52,19 @@ def number_to_short_month_name(shortened_month)
   when 9
     return "Sep"
   end
+end
+
+def volume_of_cube(side)
+  return side ** 3
+end
+
+def volume_of_sphere(radius)
+  π = 3.14
+  return (4/3) * π * radius
+end
+
+def farenheit_to_celsius(f)
+  # to get the most accurate value it is necessary
+  celsius = (f.to_f - 32) * 5 / 9
+  return celsius
 end

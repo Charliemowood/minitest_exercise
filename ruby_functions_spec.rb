@@ -1,10 +1,16 @@
+#pulling in the requirements
 require( 'minitest/autorun' )
+#pulling in the file in the directory that we are going to test
 require_relative( 'ruby_functions_practice' )
-
+# creating container to puts our class in.
+# minitest requires test at the beginning function
+# class need include an end
 class Functions_Practice < MiniTest::Test
 
   def test_return_10()
     return_10_result = return_10()
+    #instead of defining a var with expected, for brevity put value in assert
+    #ewal directly
     assert_equal( 10, return_10_result )
   end
 
@@ -13,12 +19,10 @@ class Functions_Practice < MiniTest::Test
     assert_equal( 3, add_result )
   end
 
-
   def test_subtract()
     subtract_result = subtract( 10, 5 )
     assert_equal( 5, subtract_result )
   end
-
 
   def test_multiply()
     multiply_result = multiply( 4, 2 )
@@ -66,24 +70,22 @@ class Functions_Practice < MiniTest::Test
     assert_equal( "Sep", ninth_month_string )
   end
 
-=begin
 
-  #Further
-
-  #Given the length of a side of a cube calculate the volume
   def test_volume_of_cube()
-    #add test code here
+    expected = 8
+    actual = volume_of_cube(2)
+    assert_equal(expected, actual)
   end
 
-  #Given the radius of a sphere calculate the volume
   def test_volume_of_sphere()
-    #add test code here
+    volume_result = volume_of_sphere(2)
+    assert_equal(6.28, volume_result)
   end
 
-  #Given a value in farenheit, convert this into celsius.
-  def test_fahrenheit_to_celsius()
-    #add test code here
+# this is an imper
+  def test_farenheit_to_celsius()
+    farenheit_to_celsius_result = farenheit_to_celsius(32)
+    assert_equal(0.0, farenheit_to_celsius_result)
   end
-=end
-
+  
 end
