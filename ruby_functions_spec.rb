@@ -9,8 +9,8 @@ class Functions_Practice < MiniTest::Test
 
   def test_return_10()
     return_10_result = return_10()
-    #instead of defining a var with expected, for brevity put value in assert
-    #ewal directly
+    #instead of defining a var with expected,
+    # for brevity put value in assert_equal directly
     assert_equal( 10, return_10_result )
   end
 
@@ -87,5 +87,5 @@ class Functions_Practice < MiniTest::Test
     farenheit_to_celsius_result = farenheit_to_celsius(32)
     assert_equal(0.0, farenheit_to_celsius_result)
   end
-  
+
 end

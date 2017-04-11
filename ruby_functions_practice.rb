@@ -2,8 +2,8 @@ def return_10()
   return 10
 end
 
-# the following functions seem pretty straight forward so I am
-# a, b for parameters it seems more clean to me.
+# the following functions
+# seem simple so I am using a, b for parameters
 def add(a, b)
   return a + b
 end
@@ -64,7 +64,7 @@ def volume_of_sphere(radius)
 end
 
 def farenheit_to_celsius(f)
-  # to get the most accurate value it is necessary
+  # to get the most accurate value it is necessary to use float
   celsius = (f.to_f - 32) * 5 / 9
   return celsius
 end
